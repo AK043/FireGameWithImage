@@ -86,14 +86,7 @@ namespace FireGameWithImage
             if (fire==6) {
                 fire = 0;
                 strt = 1; end = 2;
-                MessageBox.Show("Game is Over Reload it Again");
-
-                load = 0;
-                spin = 0;
-                fire = 0;
-                chk = 0;
-                strt = 1; end = 2;
-
+                //MessageBox.Show("Game is Over Reload it Again");
                 //System.Windows.Forms.Application.Exit();
             }
         }

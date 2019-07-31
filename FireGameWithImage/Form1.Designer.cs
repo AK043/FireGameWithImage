@@ -100,19 +100,9 @@
             0,
             0,
             0});
-            this.No_Of_Bullet.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
             this.No_Of_Bullet.Name = "No_Of_Bullet";
             this.No_Of_Bullet.Size = new System.Drawing.Size(120, 39);
             this.No_Of_Bullet.TabIndex = 2;
-            this.No_Of_Bullet.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
             this.No_Of_Bullet.ValueChanged += new System.EventHandler(this.No_Of_Bullet_ValueChanged);
             // 
             // pictureBox2
