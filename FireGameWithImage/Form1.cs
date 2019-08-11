@@ -20,10 +20,51 @@ namespace FireGameWithImage
         //global object of  the different class that are used to call the method of that class with the help of refrenece 
         Gun_Shot gun_Shot_Object = new Gun_Shot();
         Random Random_Object = new Random();
-
+        int clkFire = 0,chance=0;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            clkFire++;
+           
+
+            if (clkFire <= 6)
+            {
+                int comp = gun_Shot_Object.fire(clkFire, 1, 6);
+                //this condition is used to find the winner or looser from the game if the player is winnner then the spot image will be dispaly other wise the next function will be execute 
+                if (clkFire > 0 && clkFire == Random_Object.Next(1, 6) && comp>0)
+                {
+                    pictureBox1.ImageLocation = "spot.jpg";
+                    //this method is used to reset the count variable so the game will be execute again 
+                    MessageBox.Show("you are the Winner of this game");
+
+
+                }
+            }
+            if (clkFire == 6)
+            {
+                chance++;
+                clkFire = 0;
+                //this block execute  when the game is over and display the looser message 
+                MessageBox.Show("your last Chance Now to Play");
+                //this method is used to reset the count variable so the game will be execute again 
+                gun_Shot_Object.reset();
+              
+            }
+            if (chance==2) {
+                MessageBox.Show("Your game is over now");
+            }
+
+
+            
         }
 
         private void Lad_Bullet_Click(object sender, EventArgs e)

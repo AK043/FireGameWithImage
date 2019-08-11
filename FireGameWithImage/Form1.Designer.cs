@@ -36,6 +36,7 @@
             this.No_Of_Bullet = new System.Windows.Forms.NumericUpDown();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.No_Of_Bullet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -45,6 +46,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.Fire_Gun);
             this.groupBox1.Controls.Add(this.Spin_Gun);
             this.groupBox1.Controls.Add(this.Lad_Bullet);
@@ -61,7 +63,7 @@
             // Fire_Gun
             // 
             this.Fire_Gun.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fire_Gun.Location = new System.Drawing.Point(21, 279);
+            this.Fire_Gun.Location = new System.Drawing.Point(21, 263);
             this.Fire_Gun.Name = "Fire_Gun";
             this.Fire_Gun.Size = new System.Drawing.Size(158, 52);
             this.Fire_Gun.TabIndex = 5;
@@ -125,6 +127,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(182, 265);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 52);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Shoot Away";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,6 +148,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.No_Of_Bullet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -152,6 +166,7 @@
         private System.Windows.Forms.Button Lad_Bullet;
         private System.Windows.Forms.Button Spin_Gun;
         private System.Windows.Forms.Button Fire_Gun;
+        private System.Windows.Forms.Button button1;
     }
 }
 
